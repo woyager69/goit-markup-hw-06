@@ -418,8 +418,48 @@
             <use href="images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="form js-speaker-form">
+          <div class="form-field">
+            <label class="form-label" for="name">Имя</label>
+            <input class="form-input" type="text" name="name" id="name" autocomplete="name" />
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-name"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="tel">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel" autocomplete="tel" />
+            <svg class="form-icon" width="13" height="13">
+              <use href="./images/icons.svg#icon-tel"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="mail">Почта</label>
+            <input class="form-input" type="email" name="mail" id="mail" autocomplete="email" />
+            <svg class="form-icon" width="15" height="12">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <div class="comment-field">
+            <label class="form-label" for="comment">Комментарии</label>
+            <textarea
+              class="comment-input"
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <input type="checkbox" name="checkbox" value="mailing" id="mailing" />
+          <label for="mailing"></label>Соглашаюсь с рассылкой и принимаю<a href="#"
+            >Условия договора</a
+          >
+          <button class="send-btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
+    <script src="./js/form.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

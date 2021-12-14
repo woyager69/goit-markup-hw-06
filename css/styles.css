@@ -28,7 +28,9 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
-
+textarea {
+  resize: none;
+}
 img {
   display: block;
 }
@@ -233,6 +235,7 @@ header .container,
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
   width: 528px;
   height: 581px;
@@ -258,10 +261,90 @@ header .container,
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  outline: var(--accent-color);
+}
 .close-icon {
   position: absolute;
 
   fill: rgba(0, 0, 0, 1);
+}
+.modal-close-btn:hover .close-icon,
+.modal-close-btn:focus .close-icon {
+  fill: var(--accent-color);
+}
+.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+
+  color: var(--title-text-color);
+}
+.js-speaker-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+.comment-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+.comment-input {
+  width: 100%;
+  height: 120px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  color: var(--title-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.comment-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-input {
+  color: var(--title-text-color);
+  width: 100%;
+  height: 40px;
+  padding: 12px 12px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-input:focus,
+.comment-input:focus {
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
+}
+.form-label {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+
+  color: var(--primary-text-color);
+}
+.form-icon {
+  position: absolute;
+  top: 31px;
+  left: 14px;
+}
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
 }
 /* advantages section */
 .advantages-list {
