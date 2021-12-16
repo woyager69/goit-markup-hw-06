@@ -393,10 +393,9 @@ header .container,
 .check-icon {
   position: absolute;
   display: block;
-  width: 16px;
-  height: 15px;
 }
 .checkbox-link {
+  margin-left: 5px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
