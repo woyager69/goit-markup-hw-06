@@ -47,6 +47,9 @@ img {
   --hero-background-color: #c4c4c4;
   --footer-background-color: #2f303a;
 }
+:focus {
+  outline-color: var(--accent-color);
+}
 body {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -389,6 +392,8 @@ header .container,
   border: 2px solid black;
   border-radius: 2px;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-icon {
   position: absolute;
@@ -400,13 +405,13 @@ header .container,
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+
   color: var(--accent-color);
 }
-.checkbox:checked + .check-box {
+.checkbox:checked + .checkbox-label .check-box {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
-
-  background-origin: border-box;
 }
 .send-btn {
   width: 200px;
