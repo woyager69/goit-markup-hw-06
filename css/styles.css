@@ -48,7 +48,7 @@ img {
   --footer-background-color: #2f303a;
 }
 :focus {
-  outline-color: var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -217,9 +217,12 @@ header .container,
   background-color: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-hero:hover,
+.button-hero:hover {
+  background-color: var(--active-button-color);
+}
 .button-hero:focus {
   background-color: var(--active-button-color);
+  outline-color: var(--primary-white-color);
 }
 .backdrop {
   position: fixed;
@@ -419,7 +422,8 @@ header .container,
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
-.send-btn {
+.modal-send-btn,
+.footer-send-btn {
   width: 200px;
   height: 50px;
   font-weight: bold;
@@ -436,10 +440,15 @@ header .container,
   background-color: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.send-btn:hover,
-.send-btn:focus {
+.modal-send-btn:hover,
+.modal-send-btn:focus {
   background-color: var(--active-button-color);
-  outline: var(--accent-color);
+}
+.modal-send-btn:focus {
+  outline-color: var(--title-text-color);
+}
+.footer-send-btn:focus {
+  outline-color: var(--primary-white-color);
 }
 /* advantages section */
 .advantages-list {
@@ -559,6 +568,10 @@ header .container,
   background-color: var(--primary-white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.social-icon {
+  fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .link-icon:hover,
 .link-icon:focus {
   background-color: var(--accent-color);
@@ -567,10 +580,7 @@ header .container,
 .link-icon:focus .social-icon {
   fill: var(--primary-white-color);
 }
-.social-icon {
-  fill: var(--icon-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 /* clients-list */
 .clients-list {
   display: flex;
